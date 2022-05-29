@@ -1,0 +1,39 @@
+<html>
+    <head>
+       <title>My Selfie App</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link href="style.css" rel="stylesheet">
+
+</head>
+ 
+<body>
+    <div class="container">
+    <center>
+        <h1>Collage App 
+<img id="logo_img" src ="selfie.jpeg">
+        </h1>
+        <hr>
+        
+<button class="btn btn-primary" onclick="start()">Start</button>
+        <p>Press the Start button</p>
+
+        <label>Your webcam : </label>
+<div id="camera"></div>
+        <br>
+
+        <label>Your selife Will Display Here: </label>
+<br><br><br>
+        <img src="data:image/jpeg;base64,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" width="400px" >
+        <img src="https://images.pexels.com/photos/1787235/pexels-photo-1787235.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="300px">
+        <img src="https://iphoneswallpapers.com/wp-content/uploads/2021/11/DSLR-Camera-iPhone-Wallpaper.jpg" width="200px">
+<div id="result"></div>
+    </center>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
